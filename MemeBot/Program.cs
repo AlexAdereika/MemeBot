@@ -34,7 +34,7 @@ namespace MemeBot
 
             if (message.Text.ToLower().Contains("юля"))
             {
-                await botClient.SendStickerAsync(message.Chat.Id, "https://github.com/TelegramBots/book/raw/master/src/docs/sticker-fred.webp");
+                await botClient.SendStickerAsync(message.Chat.Id, "D:\\MemeBot\\MemeBot\\MemeBot\\src\\chpic.su_-_PeachCatPack22_008.webm");
             }
         }
 
