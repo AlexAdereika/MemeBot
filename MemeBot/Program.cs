@@ -1,7 +1,8 @@
-﻿using System;
-using System.Linq;
-using Telegram.Bot;
+﻿using Telegram.Bot;
+using Telegram.Bot.Exceptions;
+using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
+using Telegram.Bot.Types.Enums;
 
 namespace MemeBot
 {
@@ -10,7 +11,6 @@ namespace MemeBot
         static void Main(string[] args)
         {
             var client = new TelegramBotClient("6172519880:AAHWUJA4T9aIy_Cm5aYczNwI8FhPfCeQBm4");
-
             client.StartReceiving(Update, Error, null);
             Console.ReadLine();
         }
@@ -28,13 +28,15 @@ namespace MemeBot
                     if (message.Text.ToLower().Contains(item))
                     {
                         await botClient.SendTextMessageAsync(message.Chat.Id, "Ну здравствуй! \nКак тебя зовут?");
+                        return;
                     }
                 }
             }
 
             if (message.Text.ToLower().Contains("юля"))
             {
-                await botClient.SendStickerAsync(message.Chat.Id, "D:\\MemeBot\\MemeBot\\MemeBot\\src\\chpic.su_-_PeachCatPack22_008.webm");
+                await botClient.SendStickerAsync(message.Chat.Id, "https://raw.githubusercontent.com/AlexAdereika/MemeBot/master/MemeBot/src/Valentin_kk_001.webp");
+                return;
             }
         }
 
