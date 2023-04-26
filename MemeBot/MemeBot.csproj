@@ -12,9 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="src\Valentin_kk_001.webp">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </None>
+    <Folder Include="NewFolder\" />
   </ItemGroup>
 
 </Project>

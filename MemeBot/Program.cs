@@ -35,7 +35,7 @@ namespace MemeBot
 
             if (message.Text.ToLower().Contains("юля"))
             {
-                await botClient.SendStickerAsync(message.Chat.Id, "https://raw.githubusercontent.com/AlexAdereika/MemeBot/master/MemeBot/src/Valentin_kk_001.webp");
+                await botClient.SendStickerAsync(message.Chat.Id, "https://github.com/AlexAdereika/MemeBot/blob/master/MemeBot/src/Valentin_kk_001.webp");
                 return;
             }
         }
